@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/middle-of-the-linked-list/
 // Synced by: LinkCode
-// Date: 08/09/2026, 23:29:31
+// Date: 08/09/2026, 23:32:13
 // ======================================
 
 
