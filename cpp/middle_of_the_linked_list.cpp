@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/middle-of-the-linked-list/
 // Synced by: LinkCode
-// Date: 08/09/2026, 23:16:36
+// Date: 08/09/2026, 23:29:31
 // ======================================
 
 
@@ -20,19 +20,32 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        int count=0;
-        ListNode *temp=head;
-        while(temp!=NULL){
-            temp=temp->next;
-            count++;
-        }
+        // int count=0;
+        // ListNode *temp=head;
+        // while(temp!=NULL){
+        //     temp=temp->next;
+        //     count++;
+        // }
         
-        temp=head;
-        for(int i=0;i<count/2;i++){
+        // temp=head;
+        // for(int i=0;i<count/2;i++){
             
-            temp=temp->next;
+        //     temp=temp->next;
+        // }
+        // return temp;
+
+
+        ListNode *fast=head;
+        ListNode *slow=head;
+        
+
+        while(fast!=NULL&&fast->next!=NULL){
+            fast=fast->next->next;
+            slow=slow->next;
+
         }
-        return temp;
+        return slow;
+
         
     }
 };
