@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/check-if-the-sentence-is-pangram/
 // Synced by: LinkCode
-// Date: 24/10/2026, 09:38:53
+// Date: 24/10/2026, 09:43:42
 // ======================================
 
 
@@ -23,12 +23,7 @@ public:
 
         unordered_set<int> seen;
         for(int i=0;i<sentence.size();i++){
-            if(seen.count(sentence[i]-'a')){
-                continue;
-            }
-            else{
                 seen.insert(sentence[i]-'a');
-            }
         }
         return(seen.size()==26);
     }
